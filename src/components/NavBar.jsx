@@ -17,7 +17,7 @@ const NavBar = () => {
         
          <div class='animate-bounce  pl-5 pt-20 ' >
             
-            <img src={Logo} alt="Logo image" style={{width:'80px'}}/>
+            <img src={Logo} alt="Logo image" style={{width:'80px',borderRadius:400 /2 }}/>
          </div>
          {/*Menu */}
           <ul className='hidden lg:flex  text-xl'>

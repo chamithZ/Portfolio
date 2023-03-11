@@ -2,6 +2,8 @@ import React from 'react'
 import eden from '../assets/eden.png'
 import pc from '../assets/pc.png'
 import wed from '../assets/wed.png'
+import app1 from '../assets/tipcal.jpg'
+
 
 const Work = () => {
   return (
@@ -68,6 +70,23 @@ const Work = () => {
                         <div className='pt-8 text-center'>
                            
                             <a href="https://github.com/it21156960/Online-Computer-parts-management-System-OOP">
+                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div 
+                style={{backgroundImage:`url(${app1})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+
+                    {/*hover effects*/}
+
+                    <div className='opacity-0 group-hover:opacity-100'>
+                        <span className='text-2xl font-bold text-gray-900 tracking-wider'>
+                            Tip Calculator
+                        </span>
+                        <div className='pt-8 text-center'>
+                           
+                            <a href="https://github.com/chamithZ/Tip-Calculator-app/tree/main">
                                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Code</button>
                             </a>
                         </div>

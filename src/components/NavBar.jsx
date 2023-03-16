@@ -20,8 +20,9 @@ const NavBar = () => {
             <img src={Logo} alt="Logo image" style={{width:'80px',borderRadius:400 /2 }}/>
          </div>
          {/*Menu */}
-          <ul className='hidden lg:flex  text-xl'>
-            <li className='hover:text-blue-300 hover:font-bold hover:border-b-4 border-blue-600'>
+          <ul className=' hidden lg:flex  text-xl'>
+            
+            <li className=' hover:text-blue-300 hover:font-bold hover:border-b-4 border-blue-600'>
             <Link  to="home"  smooth={true} duration={500} >
             Home
         </Link>
@@ -105,7 +106,7 @@ const NavBar = () => {
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center'>
               <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-[#333333]'
-               href="https://github.com/it21156960">
+               href="https://github.com/chamithZ">
                Github<FaGithub size={35}/>
               </a>
             </li>
@@ -135,7 +136,7 @@ const NavBar = () => {
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center'>
               <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-[#333333]'
-               href="https://github.com/it21156960">
+               href="https://github.com/chamithZ">
                Github<FaGithub size={35}/>
               </a>
             </li>

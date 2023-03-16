@@ -124,6 +124,7 @@ const NavBar = () => {
             </li>
           </ul>
          </div>
+         
 
          {/*social icons*/}
          <div className='hidden lg:flex fixed flex-col top-[35%] left-0 '>

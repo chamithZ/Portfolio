@@ -1,5 +1,5 @@
 {
-  "homepage":"https://chamithz.github.io/Portfolio/",
+  "homepage": "https://chamithz.github.io/Portfolio/",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -10,6 +10,7 @@
     "react": "^18.2.0",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.7.1",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
@@ -18,8 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,4 +48,4 @@
     "tailwind-scrollbar": "^2.1.0",
     "tailwindcss": "^3.2.4"
   }
-} 
+}

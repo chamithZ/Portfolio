@@ -5,13 +5,18 @@ import Home from './components/Home';
 import NavBar from './components/NavBar';
 import Skills from './components/Skills';
 import Work from './components/Work';
-
+import {Helmet} from "react-helmet";
 
 
 
 function App() {
   return (
     <div> 
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>ChamithKavinda</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
      <NavBar/>
      <Home/>
      <About/>

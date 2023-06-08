@@ -15,6 +15,7 @@ function App() {
       <Helmet>
                 <meta charSet="utf-8" />
                 <title>ChamithKavinda</title>
+                <meta name="description" content="chamith kavinda portfolio" />
                 <link rel="canonical" href="https://chamithz.github.io/Portfolio/" />
       </Helmet>
      <NavBar/>

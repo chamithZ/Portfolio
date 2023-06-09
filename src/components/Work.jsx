@@ -3,7 +3,8 @@ import eden from '../assets/eden.png'
 import pc from '../assets/pc.png'
 import wed from '../assets/wed.png'
 import app1 from '../assets/tipcal.jpg'
-
+import travely from '../assets/travely.png'
+import edux from '../assets/edux.png'
 
 const Work = () => {
   return (
@@ -17,6 +18,42 @@ const Work = () => {
             <div className='grid sm:grid-cols-2 md:grid-clos-3 gap-4'>
 
                 {/*grid items*/}
+
+                <div 
+                style={{backgroundImage:`url(${travely})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+
+                    {/*hover effects*/}
+
+                    <div className='opacity-0 group-hover:opacity-100'>
+                        <span className='text-2xl font-bold text-gray-900 tracking-wider'>
+                            Travely
+                        </span>
+                        <div className='pt-8 text-center'>
+                           
+                            <a href="https://github.com/chamithZ/Travely">
+                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div 
+                style={{backgroundImage:`url(${edux})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+
+                    {/*hover effects*/}
+
+                    <div className='opacity-0 group-hover:opacity-100'>
+                        <span className='text-2xl font-bold text-gray-900 tracking-wider'>
+                            EduX - Educational Android App
+                        </span>
+                        <div className='pt-8 text-center'>
+                           
+                            <a href="https://github.com/chamithZ/EduX">
+                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
 
                 <div 

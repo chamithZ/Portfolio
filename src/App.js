@@ -18,15 +18,12 @@ function App() {
                 <meta name="description" content="chamith kavinda portfolio" />
                 <link rel="canonical" href="https://chamithz.github.io/Portfolio/" />
       </Helmet>
-     <NavBar/>
-     <Home/>
-     <About/>
-     <Skills/>
-     <Work/>
-     <Contact/>
-     
-     
-     
+      <NavBar/>
+       <Home/>
+      <About/>
+      <Skills/>
+      <Work/>
+      <Contact/>
            </div>
   );
 }

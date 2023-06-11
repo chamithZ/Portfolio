@@ -14,7 +14,7 @@ import php from '../assets/php.png'
 
 function Skills() {
   return (
-    <div name='skills' className=' bg-[#0a192f]  text-gray-300 pt-20 pb-20'>
+    <div name='skills' className='pt-20 pb-20 bg-[#0a192f]  text-gray-300 '>
         {/*container*/}
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
             <div>

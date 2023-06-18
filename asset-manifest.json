@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.ff5453f4.css",
-    "main.js": "/Portfolio/static/js/main.2a2533cc.js",
+    "main.js": "/Portfolio/static/js/main.e531ce5b.js",
     "static/media/travely.png": "/Portfolio/static/media/travely.f63e946ee6e195e2171d.png",
     "static/media/wed.png": "/Portfolio/static/media/wed.379d35bc56a7baa9e5f5.png",
     "static/media/pc.png": "/Portfolio/static/media/pc.8f8d1053baeac76b66cf.png",
     "static/media/eden.png": "/Portfolio/static/media/eden.11662ee964b0bbe1a804.png",
+    "static/media/Chamith_Kavinda_CV.pdf": "/Portfolio/static/media/Chamith_Kavinda_CV.ab344b42159cf1a524ce.pdf",
     "static/media/edux.png": "/Portfolio/static/media/edux.f68de332c064db305672.png",
     "static/media/logo1.png": "/Portfolio/static/media/logo1.32abf0f8ff44ae1d3c1f.png",
     "static/media/java.png": "/Portfolio/static/media/java.c5ce8592f54e4a041fe0.png",
@@ -22,10 +23,10 @@
     "static/media/javascript.png": "/Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Portfolio/index.html",
     "main.ff5453f4.css.map": "/Portfolio/static/css/main.ff5453f4.css.map",
-    "main.2a2533cc.js.map": "/Portfolio/static/js/main.2a2533cc.js.map"
+    "main.e531ce5b.js.map": "/Portfolio/static/js/main.e531ce5b.js.map"
   },
   "entrypoints": [
     "static/css/main.ff5453f4.css",
-    "static/js/main.2a2533cc.js"
+    "static/js/main.e531ce5b.js"
   ]
 }

@@ -3,6 +3,7 @@ import {FaBars,FaTimes,FaGithub,FaLinkedin, FaFacebook} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import Logo from '../assets/logo1.png'
+import cv from '../assets/Chamith_Kavinda_CV.pdf'
 import {Link} from 'react-scroll'
 
 
@@ -112,13 +113,13 @@ const NavBar = () => {
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center'>
               <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-green-600'
-               href="chamith227@gmail.com">
+               href='mailto:chamith227@gmail.com'>
                 Email<HiOutlineMail size={35}/>
               </a>
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center'>
               <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-gray-600'
-               href="/">
+                href={cv} download="Chamith_Kavinda_CV.pdf">
                 Resume<BsFillPersonLinesFill size={35}/>
               </a>
             </li>
@@ -126,35 +127,35 @@ const NavBar = () => {
          </div>
          
 
-         {/*social icons*/}
-         <div className='hidden lg:flex fixed flex-col top-[35%] left-0 '>
-          <ul>
-            <li className='w-[160px] h-[60px] flex justify-between items-center'>
-              <a className='flex  justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-blue-600'
-               href="https://www.linkedin.com/in/chamith-kavinda-874589214">
-                Linkedin<FaLinkedin size={35}/>
-              </a>
-            </li>
-            <li className='w-[160px] h-[60px] flex justify-between items-center'>
-              <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-[#333333]'
-               href="https://github.com/chamithZ">
-               Github<FaGithub size={35}/>
-              </a>
-            </li>
-            <li className='w-[160px] h-[60px] flex justify-between items-center'>
-              <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-green-600'
-               href="chamith227@gmail.com">
-                Email<HiOutlineMail size={35}/>
-              </a>
-            </li>
-            <li className='w-[160px] h-[60px] flex justify-between items-center'>
-              <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-gray-600'
-               href="/">
-                Resume<BsFillPersonLinesFill size={35}/>
-              </a>
-            </li>
-          </ul>
-         </div>
+         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
+  <ul>
+    <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>
+      <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-blue-600 relative'>
+        Linkedin<FaLinkedin size={35}/>
+        <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full bg-sky-500 opacity-50'></span>
+      </a>
+    </li>
+    <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>
+      <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-[#333333] relative'>
+        Github<FaGithub size={35}/>
+        <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full bg-sky-500 opacity-50'></span>
+      </a>
+    </li>
+    <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>
+      <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-green-600 relative'>
+        Email<HiOutlineMail size={35}/>
+        <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full  bg-sky-500 opacity-50'></span>
+      </a>
+    </li>
+    <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>
+      <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-gray-600 relative'>
+        Resume<BsFillPersonLinesFill size={35}/>
+        <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full  bg-sky-500 opacity-50'></span>
+      </a>
+    </li>
+  </ul>
+</div>
+
 
     </div>
    

@@ -130,25 +130,25 @@ const NavBar = () => {
          <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
   <ul>
     <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>
-      <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-blue-600 relative'>
+      <a href="https://www.linkedin.com/in/chamith-kavinda-874589214" className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-blue-600 relative'>
         Linkedin<FaLinkedin size={35}/>
         <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full bg-sky-500 opacity-50'></span>
       </a>
     </li>
     <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>
-      <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-[#333333] relative'>
+      <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-[#333333] relative'href="https://github.com/chamithZ">
         Github<FaGithub size={35}/>
         <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full bg-sky-500 opacity-50'></span>
       </a>
     </li>
     <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>
-      <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-green-600 relative'>
+      <a href='mailto:chamith227@gmail.com' className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-green-600 relative'>
         Email<HiOutlineMail size={35}/>
         <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full  bg-sky-500 opacity-50'></span>
       </a>
     </li>
     <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>
-      <a className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-gray-600 relative'>
+      <a  href={cv} download="Chamith_Kavinda_CV.pdf" className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-gray-600 relative'>
         Resume<BsFillPersonLinesFill size={35}/>
         <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full  bg-sky-500 opacity-50'></span>
       </a>

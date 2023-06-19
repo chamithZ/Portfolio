@@ -132,7 +132,7 @@ const NavBar = () => {
     <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>
       <a href="https://www.linkedin.com/in/chamith-kavinda-874589214" className='flex justify-between items-center w-full text-gray-300 ml-[-102px] hover:ml-[-10px] duration-300 bg-blue-600 relative'>
         Linkedin<FaLinkedin size={35}/>
-        <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full bg-sky-500 opacity-50'></span>
+        <span className='animate-ping absolute top-0 right-0 w-3 h-3 rounded-full bg-sky-500 opacity-50' ></span>
       </a>
     </li>
     <li className='w-[160px] h-[60px] flex justify-between items-center rounded-full relative'>

@@ -31,14 +31,14 @@ function Home() {
               </span>
             </button>
           </Link>
-          <Link to={cv} download="Chamith_Kavinda_CV.pdf" smooth={true} duration={500}>
+          <a href={cv} download="Chamith_Kavinda_CV.pdf" smooth={true} duration={500}>
             <button className='text-black  rounded-lg group border-2 px-6 py-3 my-2 sm:my-0 flex items-center bg-[#86b5fa] hover:bg-blue-400 hover:border-blue-400'>
               View My Resume
               <span className='group-hover:translate-y-2 duration-300'>
                 <HiDownload className='ml-3' />
               </span>
             </button>
-          </Link>
+          </a>
         </div>
 
       </div>

@@ -1,10 +1,32 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const nameInput = form.elements.name;
+    const emailInput = form.elements.email;
+    const messageInput = form.elements.message;
+
+    // Perform form validation
+    if (!nameInput.value || !emailInput.value || !messageInput.value) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Validation Error',
+        text: 'Please fill in all the fields',
+      });
+      return;
+    }
+
+    // Submit the form
+    form.submit();
+  };
+
   return (
     <div className='contact-wrapper pt-20 pb-8 bg-[#0a192f]'>
       <div name='contact' className='w-full h-screen flex justify-center items-center p-4'>
-        <form method="POST" action="https://getform.io/f/8058211c-baac-41e9-8e01-725e5a11ee4a" className='flex flex-col max-w-[600px] w-full'>
+        <form method="POST" action="https://getform.io/f/8058211c-baac-41e9-8e01-725e5a11ee4a" className='flex flex-col max-w-[600px] w-full' onSubmit={handleSubmit}>
           <div className='pb-8'>
             <p className='text-4xl font-bold inline border-b-4 border-blue-600 text-gray-300'>Contact</p>
             <p className='text-gray-300 py-4'>Submit the form below or shoot me an email - chamith227@gmail.com</p>

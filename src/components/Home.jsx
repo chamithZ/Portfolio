@@ -10,7 +10,7 @@ function Home() {
       {/*container*/}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
 
-        <p className='text-[#86b5fa] text-3xl'>Hi, my name is</p>
+        <p className='text-[#86b5fa] text-3xl mt-8'>Hi, my name is</p>
         <Typed
           className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'
           strings={['Chamith Kavinda']}

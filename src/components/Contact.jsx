@@ -25,9 +25,9 @@ const Contact = () => {
 
   return (
     <div className='contact-wrapper pt-20 pb-8 bg-[#0a192f]'>
-      <div name='contact' className='w-full h-screen flex justify-center items-center p-4'>
+      <div name='contact' className='w-full h-screen flex justify-center items-center p-4 md:pt-20'>
         <form method="POST" action="https://getform.io/f/8058211c-baac-41e9-8e01-725e5a11ee4a" className='flex flex-col max-w-[600px] w-full' onSubmit={handleSubmit}>
-          <div className='pb-8'>
+          <div className='pb-8 md:pt-10'>
             <p className='text-4xl font-bold inline border-b-4 border-blue-600 text-gray-300'>Contact</p>
             <p className='text-gray-300 py-4'>Submit the form below or shoot me an email - chamith227@gmail.com</p>
           </div>

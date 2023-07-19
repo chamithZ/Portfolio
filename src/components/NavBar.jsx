@@ -21,36 +21,203 @@ const NavBar = () => {
             <img src={Logo} alt="Logo image" style={{width:'80px',borderRadius:400 /2 }}/>
          </div>
          {/*Menu */}
-          <ul className=' hidden lg:flex  text-xl'>
+          <ul  className=' hidden lg:flex  text-xl'>
             
-            <li className=' hover:text-blue-300 hover:font-bold hover:border-b-4 border-blue-600'>
+            <li class="
+               hover:text-blue-300 hover:font-medium
+                capitalize
+                inline-block
+                text-2xl
+                relative
+                cursor-pointer
+                transition-all
+                duration-400
+                before:content-['']
+                before:absolute
+                before:-bottom-2
+                before:left-0
+                before:w-0
+                before:h-1.5
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-300
+                before:bg-gradient-to-r
+                before:from-blue-300
+                before:via-blue-400
+                before:to-blue-600
+                hover:before:w-full
+                hover:before:opacity-100
+               
+        "
+            >
             <Link  to="home"  smooth={true} duration={500} >
+            
             Home
+        
         </Link>
             </li>
-            <li className='hover:text-blue-300 hover:font-bold hover:border-b-4 border-blue-600'>
+            <li 
+            class="
+            hover:text-blue-300 hover:font-medium
+            capitalize
+            inline-block
+            text-2xl
+            relative
+            cursor-pointer
+            transition-all
+            duration-400
+            before:content-['']
+            before:absolute
+            before:-bottom-2
+            before:left-0
+            before:w-0
+            before:h-1.5
+            before:rounded-full
+            before:opacity-0
+            before:transition-all
+            before:duration-300
+            before:bg-gradient-to-r
+            before:from-blue-300
+            before:via-blue-400
+            before:to-blue-600
+            hover:before:w-full
+            hover:before:opacity-100
+    "
+             >
+              
             <Link  to="about"  smooth={true} duration={500} >
+            <p >
             About
+            </p>
         </Link>
             </li>
-            <li className='hover:text-blue-300 hover:font-bold hover:border-b-4 border-blue-600'>
+            <li 
+            class="
+            hover:text-blue-300 hover:font-medium
+            capitalize
+            inline-block
+            text-2xl
+            relative
+            cursor-pointer
+            transition-all
+            duration-400
+            before:content-['']
+            before:absolute
+            before:-bottom-2
+            before:left-0
+            before:w-0
+            before:h-1.5
+            before:rounded-full
+            before:opacity-0
+            before:transition-all
+            before:duration-300
+            before:bg-gradient-to-r
+            before:from-blue-300
+            before:via-blue-400
+            before:to-blue-600
+            hover:before:w-full
+            hover:before:opacity-100
+    "
+            >
             <Link  to="skills"  smooth={true} duration={500} >
             Skills
         </Link>
             </li>
-            <li className='hover:text-blue-300 hover:font-bold hover:border-b-4 border-blue-600'>
-            <Link  to="work"  smooth={true} duration={500} >
+            <li 
+            class="
+            hover:text-blue-300 hover:font-medium
+            capitalize
+            inline-block
+            text-2xl
+            relative
+            cursor-pointer
+            transition-all
+            duration-400
+            before:content-['']
+            before:absolute
+            before:-bottom-2
+            before:left-0
+            before:w-0
+            before:h-1.5
+            before:rounded-full
+            before:opacity-0
+            before:transition-all
+            before:duration-300
+            before:bg-gradient-to-r
+            before:from-blue-300
+            before:via-blue-400
+            before:to-blue-600
+            hover:before:w-full
+            hover:before:opacity-100
+    "
+            >
+            <Link  to="work"  smooth={true} duration={500} >  
             Work
         </Link>
             </li>
 
-            <li className='hover:text-blue-300 hover:font-bold hover:border-b-4 border-blue-600'>
-                <a href="https://codehubx.wordpress.com/">
+            <li 
+            class="
+            hover:text-blue-300 hover:font-medium
+            capitalize
+            inline-block
+            text-2xl
+            relative
+            cursor-pointer
+            transition-all
+            duration-400
+            before:content-['']
+            before:absolute
+            before:-bottom-2
+            before:left-0
+            before:w-0
+            before:h-1.5
+            before:rounded-full
+            before:opacity-0
+            before:transition-all
+            before:duration-300
+            before:bg-gradient-to-r
+            before:from-blue-300
+            before:via-blue-400
+            before:to-blue-600
+            hover:before:w-full
+            hover:before:opacity-100
+    "
+            >
+                <a href="https://codehubx.wordpress.com/">  
                   My blog
                 </a>
             </li>
-            <li className='hover:text-blue-300 hover:font-bold hover:border-b-4 border-blue-600'>
-            <Link  to="contact"  smooth={true} duration={500} >
+            <li
+            class="
+            hover:text-blue-300 hover:font-medium
+            capitalize
+            inline-block
+            text-2xl
+            relative
+            cursor-pointer
+            transition-all
+            duration-400
+            before:content-['']
+            before:absolute
+            before:-bottom-2
+            before:left-0
+            before:w-0
+            before:h-1.5
+            before:rounded-full
+            before:opacity-0
+            before:transition-all
+            before:duration-300
+            before:bg-gradient-to-r
+            before:from-blue-300
+            before:via-blue-400
+            before:to-blue-600
+            hover:before:w-full
+            hover:before:opacity-100
+    "
+            >
+            <Link  to="contact"  smooth={true} duration={500} >    
             Contact
         </Link>
             </li>

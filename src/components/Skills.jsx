@@ -11,6 +11,9 @@ import mysql from '../assets/mysql.png'
 import firebase from '../assets/firebase.png'
 import ccc from '../assets/ccc.png'
 import php from '../assets/php.png'
+import docker from '../assets/docker.png'
+import spring from '../assets/spring.png'
+import angular from '../assets/angular.png'
 
 function Skills() {
   return (
@@ -41,6 +44,10 @@ function Skills() {
                     <img className='w-20 mx-auto' src={Reactjs} alt="react icon" />
                     <p className='my-4'>React</p>
                 </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={angular} alt="react icon" />
+                    <p className='my-4'>Angular</p>
+                </div>
 
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={Tailwind} alt="ti icon" />
@@ -62,14 +69,22 @@ function Skills() {
                     <p className='my-4'>Java</p>
                 </div>
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={mysql} alt="mysql icon" />
-                    <p className='my-4'>MySQL</p>
+                    <img className='w-20 mx-auto' src={spring} alt="java icon" />
+                    <p className='my-4'>SpringBoot</p>
                 </div>
+              
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={ccc} alt="c++ icon" />
                     <p className='my-4'>C++</p>
                 </div>
-
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={mysql} alt="mysql icon" />
+                    <p className='my-4'>MySQL</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                    <img className='w-20 mx-auto' src={docker} alt="mysql icon" />
+                    <p className='my-4'>Docker</p>
+                </div>
                 
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto' src={firebase} alt="firebase icon" />

@@ -11,7 +11,7 @@ import {Helmet} from "react-helmet";
 
 function App() {
   return (
-    <div> 
+    <div className='bg-[#0a192f] '> 
       <Helmet>
                 <meta charSet="utf-8" />
                 <title>ChamithKavinda</title>
@@ -22,8 +22,12 @@ function App() {
        <Home/>
       <About/>
       <Skills/>
+      <div className='mt-20'>
       <Work/>
+      </div>
+      <div className='mt-20'>
       <Contact/>
+      </div>
            </div>
   );
 }

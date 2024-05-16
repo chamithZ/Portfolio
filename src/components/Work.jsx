@@ -4,7 +4,10 @@ import pc from '../assets/pc.png'
 import wed from '../assets/wed.png'
 import app1 from '../assets/tipcal.jpg'
 import travely from '../assets/travely.png'
+import hotelPLus from '../assets/HotelPlus.png'
 import edux from '../assets/edux.png'
+import skillspan from '../assets/skillspan.png'
+import space from '../assets/space.png'
 
 const Work = () => {
   return (
@@ -19,8 +22,84 @@ const Work = () => {
 
                 {/*grid items*/}
 
+            
+               
                 <div 
-                style={{backgroundImage:`url(${travely})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
+                style={{backgroundImage:`url(${hotelPLus})`}} className='shadow-lg bg-black bg-opacity-50 group container rounded-md flex justify-center items-center mx-auto content-div'>
+
+                    {/*hover effects*/}
+
+                    <div className='opacity-0 group-hover:opacity-100'>
+                        <span className='text-2xl font-bold text-gray-900 tracking-wider ml-5'>
+                            HotelPlus 
+                            <div className='ml-5 mt-5'>
+                            Enterprise-level Hotel Management System
+                            </div>
+                        </span>
+                        <div className='pt-8 text-center'>
+                           
+                            <a href="https://github.com/chamithZ/TravellPlus.git">
+                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div 
+                style={{backgroundImage:`url(${skillspan})`}} className='shadow-lg bg-black bg-opacity-50 group container rounded-md flex justify-center items-center mx-auto content-div'>
+
+                    {/*hover effects*/}
+
+                    <div className='opacity-0 group-hover:opacity-100'>
+                        <span className='text-2xl font-bold text-gray-900 tracking-wider '>
+                            <div className='ml-5'>
+                            SKillSpan Research Project
+                            </div>
+                           <div className='ml-5 mt-2'>
+                           Bridging the Gap Between Academia and Industry in Software Engineering
+                           </div>
+                       
+                        </span>
+                        <div className='pt-8 text-center'>
+                           
+                            <a href="https://github.com/chamithZ/TravellPlus.git">
+                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div 
+                style={{backgroundImage:`url(${space})`}} className='shadow-lg bg-black bg-opacity-50 group container rounded-md flex justify-center items-center mx-auto content-div'>
+
+                    {/*hover effects*/}
+
+                    <div className='opacity-0 group-hover:opacity-100'>
+                        <span className='text-2xl font-bold text-gray-900 tracking-wider '>
+                            <div className='ml-5'>
+                            Space-Explorer
+                            </div>
+                           <div className='ml-5 mt-2'>
+                            Explore space-related imagery and data from NASA.
+                           </div>
+                       
+                        </span>
+                        <div className='pt-8 text-center'>
+
+                            <a href="https://space-explorer-xi.vercel.app/">
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Demo</button>
+                            </a>
+                        
+                            <a href="https://github.com/chamithZ/Space-Explorer.git">
+                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Code</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div 
+                style={{backgroundImage:`url(${travely})`}} className='shadow-lg bg-black bg-opacity-50 group container rounded-md flex justify-center items-center mx-auto content-div'>
 
                     {/*hover effects*/}
 
@@ -77,23 +156,7 @@ const Work = () => {
                 </div>
 
 
-                <div 
-                style={{backgroundImage:`url(${eden})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
-                    {/*hover effects*/}
-
-                    <div className='opacity-0 group-hover:opacity-100'>
-                        <span className='text-2xl font-bold text-gray-900 tracking-wider'>
-                                Online book store
-                        </span>
-                        <div className='pt-8 text-center'>
-                            
-                            <a href="https://github.com/it21156960/Eden-Bookstore">
-                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Code</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        
 
                 <div 
                 style={{backgroundImage:`url(${pc})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
@@ -112,23 +175,7 @@ const Work = () => {
                         </div>
                     </div>
                 </div>
-                <div 
-                style={{backgroundImage:`url(${app1})`}} className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-
-                    {/*hover effects*/}
-
-                    <div className='opacity-0 group-hover:opacity-100'>
-                        <span className='text-2xl font-bold text-gray-900 tracking-wider'>
-                            Tip Calculator
-                        </span>
-                        <div className='pt-8 text-center'>
-                           
-                            <a href="https://github.com/chamithZ/Tip-Calculator-app/tree/main">
-                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-gray-900 text-white font-bold text-lg'>Code</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            
             </div>
         </div>
 

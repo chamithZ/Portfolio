@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.ec34f795.css",
-    "main.js": "/Portfolio/static/js/main.67efe093.js",
+    "main.css": "/Portfolio/static/css/main.111c679b.css",
+    "main.js": "/Portfolio/static/js/main.bb8ae1d6.js",
+    "static/media/space.png": "/Portfolio/static/media/space.ad7df18b67f472137bb3.png",
     "static/media/travely.png": "/Portfolio/static/media/travely.f63e946ee6e195e2171d.png",
     "static/media/wed.png": "/Portfolio/static/media/wed.379d35bc56a7baa9e5f5.png",
     "static/media/pc.png": "/Portfolio/static/media/pc.8f8d1053baeac76b66cf.png",
+    "static/media/skillspan.png": "/Portfolio/static/media/skillspan.240ce16948576ab2e106.png",
     "static/media/eden.png": "/Portfolio/static/media/eden.11662ee964b0bbe1a804.png",
+    "static/media/HotelPlus.png": "/Portfolio/static/media/HotelPlus.3234a26586d8c60c721d.png",
     "static/media/Chamith_Kavinda_CV.pdf": "/Portfolio/static/media/Chamith_Kavinda_CV.2fabb73b55b206e1ae61.pdf",
     "static/media/edux.png": "/Portfolio/static/media/edux.f68de332c064db305672.png",
     "static/media/logo1.png": "/Portfolio/static/media/logo1.32abf0f8ff44ae1d3c1f.png",
@@ -24,11 +27,11 @@
     "static/media/mysql.png": "/Portfolio/static/media/mysql.4676ad983d6bd3e9fac9.png",
     "static/media/javascript.png": "/Portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Portfolio/index.html",
-    "main.ec34f795.css.map": "/Portfolio/static/css/main.ec34f795.css.map",
-    "main.67efe093.js.map": "/Portfolio/static/js/main.67efe093.js.map"
+    "main.111c679b.css.map": "/Portfolio/static/css/main.111c679b.css.map",
+    "main.bb8ae1d6.js.map": "/Portfolio/static/js/main.bb8ae1d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec34f795.css",
-    "static/js/main.67efe093.js"
+    "static/css/main.111c679b.css",
+    "static/js/main.bb8ae1d6.js"
   ]
 }

@@ -22,7 +22,7 @@ function App() {
        <Home/>
       <About/>
       <Skills/>
-      <div className='mt-20'>
+      <div className='mt-20'> 
       <Work/>
       </div>
       <div className='mt-20'>

@@ -16,7 +16,7 @@ const NavBar = () => {
     
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4  bg-[#0a192f] text-gray-300'>
         
-         <div class='animate-bounce  pl-5 pt-20 ' >
+         <div class=' pl-5 pt-20 ' >
             
             <img src={Logo} alt="Logo image" style={{width:'80px',borderRadius:400 /2 }}/>
          </div>

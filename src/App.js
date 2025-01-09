@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import Skills from './components/Skills';
 import Work from './components/Work';
 import {Helmet} from "react-helmet";
+import ChatInterface from './components/ChatInterface';
 
 
 
@@ -22,6 +23,7 @@ function App() {
        <Home/>
       <About/>
       <Skills/>
+      <ChatInterface/>
       <div className='mt-28'> 
       <Work/>
       </div>

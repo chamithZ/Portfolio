@@ -16,7 +16,7 @@ function ChatBotIcon({ onClick }) {
 
   return (
     <div
-      className="fixed bottom-5 right-5 flex items-center justify-center group cursor-pointer"
+      className="fixed bottom-5 right-5 flex items-center justify-center group cursor-pointer z-10"
       onClick={onClick}
     >
       {/* Tooltip */}

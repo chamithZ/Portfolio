@@ -120,7 +120,7 @@ function ChatInterface() {
     <div>
       {!isChatOpen && (
         <div
-          className="fixed bottom-5 right-5 flex items-center justify-center group cursor-pointer"
+          className="fixed bottom-5 right-5 flex items-center justify-center group cursor-pointer z-10"
           onClick={() => setIsChatOpen(true)}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -141,7 +141,7 @@ function ChatInterface() {
         </div>
       )}
       {isChatOpen && (
-        <div className="fixed bottom-5 right-5 w-[95%] max-w-md md:max-w-lg lg:max-w-2xl h-[90%] max-h-[500px] bg-[#1a2b3c] rounded-2xl shadow-lg flex flex-col">
+        <div className="fixed bottom-5 right-5 w-[95%] max-w-md md:max-w-lg lg:max-w-2xl h-[90%] max-h-[500px] bg-[#1a2b3c] rounded-2xl shadow-lg flex flex-col z-10">
           <div className="bg-[#4a90e2] p-4 text-white flex justify-between items-center rounded-t-2xl">
             <span className="font-bold">Chat with Me</span>
             <button

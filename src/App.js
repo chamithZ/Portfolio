@@ -23,7 +23,7 @@ function App() {
        <Home/>
       <About/>
       <Skills/>
-      <ChatInterface/>
+      <ChatInterface />
       <div className='mt-28'> 
       <Work/>
       </div>

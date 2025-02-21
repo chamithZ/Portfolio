@@ -8,6 +8,17 @@ import travely from '../assets/travely.png';
 import edux from '../assets/edux.png';
 import wed from '../assets/wed.png';
 import pc from '../assets/pc.png';
+import skillspan1 from '../assets/skillSpan1.png';
+import skillspan2 from '../assets/skillSpan2.png';
+import skillspan3 from '../assets/skillSpan3.png';
+import skillspan4 from '../assets/skillSpan4.png';
+import skillspanHome from '../assets/skillSpanHome.png';
+import travelPlus2 from '../assets/travelPlus2.png';
+import travelPlus3 from '../assets/travelPlus3.png';
+import travelPlus4 from '../assets/travelPlus4.png';
+import travelPlusMail from '../assets/travelPlusMail.png';
+import travely1 from '../assets/travely1.jpg';
+import travely2 from '../assets/travely2.jpg';
 
 const Work = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,68 +30,69 @@ const Work = () => {
   
   const projects = [
     { 
-      name: 'HotelPlus', 
+      name: 'TravellPlus', 
       image: hotelPlus, 
-      images: [hotelPlus, wed, '/api/placeholder/800/400'],
+      images: [hotelPlus, travelPlus2, travelPlus3, travelPlus4, travelPlusMail],
       description: 'Enterprise-level Hotel Management System', 
       link: 'https://github.com/chamithZ/TravellPlus.git', 
-      details: 'A comprehensive hotel management solution featuring booking systems, inventory management, and customer relationship tools.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'JWT']
+      details: 'This project is a Hotel Management System developed using Angular and Spring Boot. It offers a comprehensive set of functionalities to manage hotels, bookings, supplements, discounts, and more. The system also incorporates additional features such as current location tracking, email services, PDF generation, and efficient data handling using pagination.',
+      technologies: ['Angular', 'SpringBoot', 'SQL', 'JWT', 'Tailwind CSS','GeoLocation API','JavaMail API']
     },
     { 
       name: 'SkillSpan', 
-      image: skillspan, 
-      images: [hotelPlus, '/api/placeholder/800/400', '/api/placeholder/800/400'],
+      image: skillspanHome, 
+      images: [skillspanHome, skillspan1, skillspan2, skillspan3, skillspan4],
       description: 'Bridging the Gap Between Academia and Industry in Software Engineering', 
       link: 'https://github.com/chamithZ/SkillSpan_V3.git',
-      details: 'Platform connecting students with industry professionals through project-based learning and mentorship opportunities.',
-      technologies: ['React', 'Firebase', 'Material-UI', 'Node.js', 'Express'] 
+      details: 'SkillSpan is more than just a tool; it represents a transformative bridge between academia and industry. By fostering collaboration and innovation, it aims to equip the next generation of software engineers with the skills and knowledge required to thrive in the ever-evolving field of software development.',
+      technologies: ['React', 'MongoDB', 'Material-UI', 'Node.js', 'Express'] 
     },
     { 
       name: 'Space Explorer', 
       image: space, 
-      images: [hotelPlus, '/api/placeholder/800/400', '/api/placeholder/800/400'],
+      images: [space],
       description: 'Explore space-related imagery and data from NASA.', 
       link: 'https://github.com/chamithZ/Space-Explorer.git',
-      demoUrl:'https://space-explorer.netlify.app/',
+      demoUrl:'https://space-explorer-xi.vercel.app/',
       details: 'Interactive space exploration platform featuring NASA imagery, astronomical data, and educational content.',
       technologies: ['React', 'NASA API', 'Tailwind CSS', 'Axios']
     },
     { 
       name: 'Travely', 
       image: travely, 
-      images: [hotelPlus, '/api/placeholder/800/400', '/api/placeholder/800/400'],
+      images: [travely, travely1, travely2],
       description: 'Comprehensive travel and tourism management system', 
       link: 'https://github.com/chamithZ/Travely',
+      demoUrl:'https://travelylk.netlify.app/',
       details: 'All-in-one travel management system with booking, itinerary planning, and local guide integration.',
-      technologies: ['React Native', 'Firebase', 'Google Maps API', 'Node.js']
+      technologies: ['React', 'Node', 'Express', 'MongoDB','tailwindcss']
     },
     { 
       name: 'EduX', 
       image: edux, 
-      images: [hotelPlus, '/api/placeholder/800/400', '/api/placeholder/800/400'],
+      images: [edux ],
       description: 'Educational Android App', 
       link: 'https://github.com/chamithZ/EduX',
       details: 'Mobile learning platform with interactive lessons, progress tracking, and personalized content delivery.',
-      technologies: ['Android/Kotlin', 'Firebase', 'ML Kit', 'Material Design']
+      technologies: ['Android/Kotlin', 'Firebase', 'Material Design']
     },
     { 
       name: 'Online Wedding Planning System', 
       image: wed, 
-      images: [hotelPlus, '/api/placeholder/800/400', '/api/placeholder/800/400'],
+      images: [wed],
       description: 'A platform for planning and managing wedding events.', 
       link: 'https://github.com/it21156960/Wedding-plan',
       details: 'Complete wedding planning solution with vendor management, budget tracking, and event scheduling.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe']
+      technologies: ['html', 'JS', 'Bootstrap']
     },
     { 
       name: 'Computer Parts Management', 
       image: pc,
-      images: [hotelPlus, '/api/placeholder/800/400', '/api/placeholder/800/400'], 
+      images: [pc, '/api/placeholder/800/400', '/api/placeholder/800/400'], 
       description: 'System for managing and purchasing computer parts.', 
       link: 'https://github.com/it21156960/Online-Computer-parts-management-System-OOP',
       details: 'Inventory management system for computer hardware with order processing and stock tracking.',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'Thymeleaf', 'Bootstrap']
+      technologies: ['Java', 'JS', 'MySQL', 'Bootstrap']
     }
   ];
 
@@ -146,7 +158,7 @@ const Work = () => {
         </div>
 
      {/* Project Overview Slideshow */}
-<div className="relative mb-12 h-[400px] bg-[#112240] rounded-xl overflow-hidden z-0 border border-[#86b5fa] shadow-lg"
+<div className="relative mb-12 h-[500px] bg-[#112240] rounded-xl overflow-hidden z-0 border border-[#86b5fa] shadow-lg"
      onMouseEnter={() => setIsAutoPlaying(false)}
      onMouseLeave={() => setIsAutoPlaying(true)}>
   <div className="absolute inset-0">
@@ -178,7 +190,7 @@ const Work = () => {
     </button>
   </div>
 
-  <div className="absolute bottom-0 left-0 right-0 p-6 bg-[#0a192f] bg-opacity-90 backdrop-blur-sm border-t border-[#86b5fa] transition-transform duration-300 ease-in-out">
+  <div className="absolute bottom-0 left-0 right-0 p-6 bg-black bg-opacity-70 backdrop-blur-sm  transition-transform duration-300 ease-in-out">
     <h3 className="text-2xl font-bold mb-2 text-white">{projects[currentOverview].name}</h3>
     <p className="text-white mb-4 opacity-90">{projects[currentOverview].details}</p>
     
@@ -220,7 +232,7 @@ const Work = () => {
   </div>
 
   {/* Overview Pagination Dots */}
-  <div className="absolute bottom-32 right-6 flex gap-2 z-10">
+  <div className="absolute bottom-10 right-6 flex gap-2 z-10">
     {projects.map((_, index) => (
       <button
         key={index}

@@ -70,7 +70,7 @@ const Work = () => {
     { 
       name: 'EduX', 
       image: edux, 
-      images: [edux ],
+      images: [edux],
       description: 'Educational Android App', 
       link: 'https://github.com/chamithZ/EduX',
       details: 'Mobile learning platform with interactive lessons, progress tracking, and personalized content delivery.',
@@ -88,7 +88,7 @@ const Work = () => {
     { 
       name: 'Computer Parts Management', 
       image: pc,
-      images: [pc, '/api/placeholder/800/400', '/api/placeholder/800/400'], 
+      images: [pc], 
       description: 'System for managing and purchasing computer parts.', 
       link: 'https://github.com/it21156960/Online-Computer-parts-management-System-OOP',
       details: 'Inventory management system for computer hardware with order processing and stock tracking.',
@@ -329,96 +329,103 @@ const Work = () => {
 
 {/* Project Details Modal */}
 {selectedProject && (
-  <div className='fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-4 z-50'>
-    <div className='bg-[#0a192f] p-6 rounded-lg max-w-4xl w-full text-[#ccd6f6] relative border border-[#86b5fa]'>
-      {/* Close Icon */}
-      <button 
-        onClick={() => setSelectedProject(null)}
-        className='absolute top-4 right-4 text-[#86b5fa] hover:text-white transition-colors'
-      >
-        <X size={24} />
-      </button>
-
-      <h2 className='text-3xl font-bold pr-8 text-[#ccd6f6] border-b-4 border-[#86b5fa] inline-block mb-4'>
-        {selectedProject.name}
-      </h2>
-
-      {/* Image Carousel */}
-      <div className='relative mt-6 h-[400px] bg-[#112240] rounded-lg overflow-hidden'>
-        <img 
-          src={selectedProject.images[currentModalImage]} 
-          alt={`${selectedProject.name} view ${currentModalImage + 1}`} 
-          className='w-full h-full object-contain'
-        />
-        
-        {/* Navigation Arrows */}
-        <div className="absolute inset-0 flex items-center justify-between px-4">
-          <button 
-            onClick={prevModalImage}
-            className="bg-[#86b5fa] bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-all w-10 h-10 flex items-center justify-center text-2xl"
-          >
-            &#8249;
-          </button>
-          <button 
-            onClick={nextModalImage}
-            className="bg-[#86b5fa] bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-all w-10 h-10 flex items-center justify-center text-2xl"
-          >
-            &#8250;
-          </button>
-        </div>
-
-        {/* Image Dots */}
-        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-          {selectedProject.images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentModalImage(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === currentModalImage ? 'bg-[#86b5fa] w-4' : 'bg-[#8892b0]'
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-
-      <p className='mt-6 text-[#8892b0] text-lg'>{selectedProject.details}</p>
-      
-      {/* Technology Tags */}
-      <div className="flex flex-wrap gap-2 mt-6">
-        {selectedProject.technologies.map((tech, index) => (
-          <span 
-            key={index}
-            className="px-3 py-1 bg-[#112240] text-[#86b5fa] rounded-full text-sm border border-[#86b5fa]"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-
-      <div className='mt-6 flex justify-end gap-4'>
-        {selectedProject.demoUrl && (
-          <a 
-            href={selectedProject.demoUrl}
-            target='_blank'
-            rel="noopener noreferrer"
-            className="group border-2 border-[#64ffda] px-6 py-3 rounded-lg text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 flex items-center gap-2"
-          >
-            <span>Live Demo</span>
-            <ExternalLink size={18} />
-          </a>
-        )}
-        <a 
-          href={selectedProject.link}
-          target='_blank'
-          rel="noopener noreferrer"
-          className="group border-2 border-[#86b5fa] px-6 py-3 rounded-lg text-[#86b5fa] hover:bg-[#86b5fa] hover:text-black transition-all duration-300 flex items-center"
+  <div className='fixed inset-0 bg-black bg-opacity-80 z-50 overflow-y-auto overflow-x-hidden py-4 sm:py-6'>
+    <div className='min-h-screen flex items-center justify-center'>
+      <div className='relative bg-[#0a192f] p-3 sm:p-4 md:p-6 lg:p-8 rounded-lg w-[95%] md:w-[90%] lg:w-[85%] max-w-4xl text-[#ccd6f6] border border-[#86b5fa] my-4'>
+        {/* Close Icon - Now positioned relative to viewport */}
+        <button 
+          onClick={() => setSelectedProject(null)}
+          className='absolute right-2 top-2 sm:right-3 sm:top-3 md:right-4 md:top-4 text-[#86b5fa] hover:text-white transition-colors p-2 z-10'
         >
-          View Code
-        </a>
+          <X size={24} />
+        </button>
+
+        {/* Content with proper spacing from close button */}
+        <div className='pt-8 sm:pt-6'>
+          <h2 className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold pr-6 sm:pr-8 text-[#ccd6f6] border-b-4 border-[#86b5fa] inline-block mb-3 sm:mb-4'>
+            {selectedProject.name}
+          </h2>
+
+          {/* Image Carousel */}
+          <div className='relative mt-3 sm:mt-4 md:mt-5 lg:mt-6 h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] bg-[#112240] rounded-lg overflow-hidden'>
+            <img 
+              src={selectedProject.images[currentModalImage]} 
+              alt={`${selectedProject.name} view ${currentModalImage + 1}`} 
+              className='w-full h-full object-contain'
+            />
+            
+            {/* Navigation Arrows */}
+            <div className="absolute inset-0 flex items-center justify-between px-2 sm:px-3 md:px-4">
+              <button 
+                onClick={prevModalImage}
+                className="bg-[#86b5fa] bg-opacity-50 p-1 sm:p-1.5 md:p-2 rounded-full hover:bg-opacity-75 transition-all w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center text-lg sm:text-xl md:text-2xl"
+              >
+                &#8249;
+              </button>
+              <button 
+                onClick={nextModalImage}
+                className="bg-[#86b5fa] bg-opacity-50 p-1 sm:p-1.5 md:p-2 rounded-full hover:bg-opacity-75 transition-all w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 flex items-center justify-center text-lg sm:text-xl md:text-2xl"
+              >
+                &#8250;
+              </button>
+            </div>
+
+            {/* Image Dots */}
+            <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 left-0 right-0 flex justify-center gap-1 sm:gap-1.5 md:gap-2">
+              {selectedProject.images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentModalImage(index)}
+                  className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all ${
+                    index === currentModalImage ? 'bg-[#86b5fa] w-3 sm:w-3.5 md:w-4' : 'bg-[#8892b0]'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          <p className='mt-3 sm:mt-4 md:mt-5 lg:mt-6 text-[#8892b0] text-sm sm:text-base md:text-lg leading-relaxed'>
+            {selectedProject.details}
+          </p>
+          
+          {/* Technology Tags */}
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4 md:mt-5 lg:mt-6">
+            {selectedProject.technologies.map((tech, index) => (
+              <span 
+                key={index}
+                className="px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 bg-[#112240] text-[#86b5fa] rounded-full text-xs sm:text-sm border border-[#86b5fa]"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className='mt-4 sm:mt-5 md:mt-6 flex flex-col sm:flex-row sm:justify-end gap-2 sm:gap-3 md:gap-4'>
+            {selectedProject.demoUrl && (
+              <a 
+                href={selectedProject.demoUrl}
+                target='_blank'
+                rel="noopener noreferrer"
+                className="group border-2 border-[#64ffda] px-3 sm:px-4 md:px-5 lg:px-6 py-2 md:py-2.5 lg:py-3 rounded-lg text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base"
+              >
+                <span>Live Demo</span>
+                <ExternalLink size={16} className="sm:w-4 md:w-[18px]" />
+              </a>
+            )}
+            <a 
+              href={selectedProject.link}
+              target='_blank'
+              rel="noopener noreferrer"
+              className="group border-2 border-[#86b5fa] px-3 sm:px-4 md:px-5 lg:px-6 py-2 md:py-2.5 lg:py-3 rounded-lg text-[#86b5fa] hover:bg-[#86b5fa] hover:text-black transition-all duration-300 flex items-center justify-center text-sm sm:text-base"
+            >
+              View Code
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  )}
+)}
       </div>
     </div>
   );

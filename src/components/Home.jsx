@@ -1,16 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HiArrowNarrowRight, HiDownload } from 'react-icons/hi';
+import { FaCoffee } from 'react-icons/fa';
 import Typed from 'react-typed';
 import { Link } from 'react-scroll';
 import cv from '../assets/Chamith_Kavinda_CV.pdf'
 
 function Home() {
+  const [showTooltip, setShowTooltip] = useState(false);
+  
   return (
-    <div name='home' className='w-full h-screen bg-[#0a192f]'>
+    <div name='home' className='w-full h-screen bg-[#0a192f] relative'>
+      <div className='absolute bottom-6 left-6'>
+        <a 
+          href="https://www.buymeacoffee.com/chamithkavinda" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className='group relative inline-block'
+          onMouseEnter={() => setShowTooltip(true)}
+          onMouseLeave={() => setShowTooltip(false)}
+        >
+          <button className='p-3 rounded-full bg-[#FFDD00] hover:bg-[#FFDD00]/90 flex items-center justify-center transition-all'>
+            <FaCoffee className='text-black text-xl' />
+          </button>
+        
+          <div 
+            className={`absolute -top-16 left-0 mr-4 mb-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg shadow-lg max-w-xs whitespace-normal ${
+              showTooltip ? 'opacity-100' : 'opacity-0 group-hover:opacity-100 transition-opacity'
+            }`}
+            style={{ width: 'auto', minWidth: '160px' }}
+          >
+            Support me by buying a coffee
+            <div className="absolute bottom-[-6px] left-4 transform w-0 h-0 border-t-[6px] border-t-gray-800 border-r-[6px] border-r-transparent border-l-[6px] border-l-transparent"></div>
+          </div>
+        </a>
+      </div>
+
       {/*container*/}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-
-        <p className='text-[#86b5fa] text-3xl mt-8'>Hi, my name is</p>
+        <p className='text-[#86b5fa] text-3xl mt-8'>Hi, I am</p>
         <Typed
           className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'
           strings={['Chamith Kavinda']}
@@ -25,14 +52,14 @@ function Home() {
         <div className='flex flex-col sm:flex-row mt-5'>
           <Link to="work" smooth={true} duration={500}>
             <button className='text-white rounded-lg group border-2 px-6 py-3 my-2 sm:my-0 sm:mr-4 flex items-center hover:bg-blue-900 hover:border-blue-900'>
-              Veiw My Projects
+              View My Projects
               <span className='group-hover:rotate-90 duration-300'>
                 <HiArrowNarrowRight className='ml-3' />
               </span>
             </button>
           </Link>
           <a href={cv} download="Chamith_Kavinda_CV.pdf" smooth={true} duration={500}>
-            <button className='text-black  rounded-lg group border-2 px-6 py-3 my-2 sm:my-0 flex items-center bg-[#86b5fa] hover:bg-blue-400 hover:border-blue-400'>
+            <button className='text-black rounded-lg group border-2 px-6 py-3 my-2 sm:my-0 flex items-center bg-[#86b5fa] hover:bg-blue-400 hover:border-blue-400'>
               View My Resume
               <span className='group-hover:translate-y-2 duration-300'>
                 <HiDownload className='ml-3' />
@@ -40,7 +67,6 @@ function Home() {
             </button>
           </a>
         </div>
-
       </div>
     </div>
   )

@@ -37,6 +37,10 @@ class LLMService {
 
         if (response.ok) {
           const data = await response.json();
+          // Format the response to add line breaks for ordered lists
+          if (data.content) {
+            data.content = this._formatResponse(data.content);
+          }
           // Update conversation history
           this._updateConversationHistory(prompt, data);
           return data;
@@ -89,13 +93,26 @@ class LLMService {
 
   _getPortfolioInfo() {
     return `
-      I am an undergraduate student in the Faculty of Computing at the Sri Lanka Institute of Information Technology (SLIIT). I am interested in Web Development and Mobile App Development areas. I prefer to meet new teams and collaborate to develop new projects. I am seeking exciting opportunities to apply and enhance my skills within these fields.
+      I am a Software Engineering professional with a BSc (Hons) in Information Technology from SLIIT. Currently working as an Associate Software Engineer at Tecsota LLC, I specialize in full-stack web development and mobile app development. I have experience with modern technologies including Next.js, React Native, Spring Boot, and Angular. I enjoy collaborating with teams to build innovative solutions and am always open to new opportunities and exciting projects.
   
       Work Experience:
+      - Associate Software Engineer (Tecsota LLC, February 2025 - Present)
+        - Develop full-stack web solutions using Next.js, Node.js, and GraphQL
+        - Build cross-platform mobile applications with React Native
+        - Configure CI/CD pipelines using GitHub Actions to streamline deployments
+        - Collaborate with cross-functional teams in Agile sprints to deliver scalable projects
+        - Technologies: Next.js, Node.js, GraphQL, React Native, GitHub Actions, Agile
+
       - Trainee Software Engineer (CodeGen International Pvt Ltd, June 2024 - Dec 2024)
-        - Technologies Used: Java, Spring Boot, Node, Angular, Maven, JFrog
-        - Worked on the Lia P2P project, contributing to backend and frontend development.
-        - Followed company standards in an Agile environment and participated in CI/CD with Git Pipelines.
+        - Contributed to the Lia P2P project using Spring Boot, Angular, Node.js, and SQL
+        - Built backend and frontend features following company coding standards
+        - Participated in CI/CD pipelines with Git and JFrog, improving deployment efficiency
+        - Technologies: Spring Boot, Angular, Node.js, SQL, Git, JFrog
+
+      - Industrial Pre-Training (CodeGen-SLIIT QBits, February 2024 - April 2024)
+        - Completed intensive training program covering enterprise development practices
+        - Gained hands-on experience with industry-standard tools and methodologies
+        - Prepared for professional software engineering roles
   
       Technical Skills:
       - Programming Languages: Java, JavaScript, Node.js, ReactJs, MERN Stack, C++, C, SQL, Python, Kotlin
@@ -125,16 +142,41 @@ class LLMService {
       Certificates:
       - Front-End Web Development - University of Moratuwa
       - Software Design and Architecture Specialization - University of Alberta
+      - Spring Boot - Professional Certification
+      - Angular - Professional Certification
       - Concurrent Programming in Java - Rice University
       - Frontend Development using Angular - Board Infinity
+      - Spring Framework– Ecosystem & Core, Spring Data Repositories - LearnQuest
       - Web Design for Beginners - University of Moratuwa
 
       Contact Details:
     - Email: chamith227@gmail.com
-    - Mobile: +94702784567
+    - Mobile: +94786714662
     `;
   }
   
+
+  _formatResponse(content) {
+    let formatted = content;
+    
+    // Handle italic formatting first (*text* -> *text*)
+    formatted = formatted.replace(/\*([^*]+)\*/g, '*$1*');
+    
+    // Add line breaks before numbered list items
+    // This regex looks for a number followed by a period and optional space, then text
+    formatted = formatted.replace(/(\d+\.\s*[A-Za-z])/g, '\n\n$1');
+    
+    // Also handle cases where there's text before the number (not already on a new line)
+    formatted = formatted.replace(/([^\\n])(\d+\.\s*[A-Za-z])/g, '$1\n\n$2');
+    
+    // Clean up any triple or more line breaks
+    formatted = formatted.replace(/\n\n\n+/g, '\n\n');
+    
+    // Clean up any double spaces that might have been created
+    formatted = formatted.replace(/\s{3,}/g, ' ');
+    
+    return formatted;
+  }
 
   _updateConversationHistory(userMessage, assistantResponse) {
     this.conversationHistory.push(

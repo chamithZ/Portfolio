@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, ExternalLink,Eye, ChevronRight, Play ,Plus} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { COLOR_CLASSES } from '../constants/colors';
 
 import hotelPlus from '../assets/HotelPlus.png';
 import skillspan from '../assets/skillspan.png';
@@ -150,17 +152,29 @@ const Work = () => {
   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
 
   return (
-    <div name='work' className='w-full min-h-screen text-gray-300 bg-[#0a192f]  z-0'>
+    <div name='work' className={`w-full min-h-screen ${COLOR_CLASSES.textPrimary} ${COLOR_CLASSES.bgPrimary} z-0`}>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full'>
-        <div className='pb-8'>
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-blue-600'>Work</p>
-          <p className='py-6'>Check out some of my recent work</p>
-        </div>
+        <motion.div 
+          className='pb-8'
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <p className={`text-4xl font-bold inline ${COLOR_CLASSES.headerBorder} ${COLOR_CLASSES.textPrimary}`}>Work</p>
+          <p className='py-6'>Explore my portfolio of innovative projects and solutions</p>
+        </motion.div>
 
      {/* Project Overview Slideshow */}
-<div className="relative mb-12 h-[500px] bg-[#112240] rounded-xl overflow-hidden z-0 border border-[#86b5fa] shadow-lg"
-     onMouseEnter={() => setIsAutoPlaying(false)}
-     onMouseLeave={() => setIsAutoPlaying(true)}>
+<motion.div 
+  className={`relative mb-12 h-[500px] ${COLOR_CLASSES.bgCard} rounded-xl overflow-hidden z-0 ${COLOR_CLASSES.borderPrimary} shadow-lg`}
+  onMouseEnter={() => setIsAutoPlaying(false)}
+  onMouseLeave={() => setIsAutoPlaying(true)}
+  initial={{ opacity: 0, scale: 0.9, y: 50 }}
+  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  viewport={{ once: true }}
+>
   <div className="absolute inset-0">
     <img 
       src={projects[currentOverview].image} 
@@ -175,7 +189,7 @@ const Work = () => {
   <div className="absolute inset-0 flex items-center">
     <button 
       onClick={prevOverview}
-      className="absolute left-4 bg-[#0a192f] bg-opacity-70 p-2 rounded-full hover:bg-[#86b5fa] hover:text-[#0a192f] transition-all w-10 h-10 flex items-center justify-center text-2xl border border-[#86b5fa] z-10"
+      className={`absolute left-4 ${COLOR_CLASSES.bgPrimary} bg-opacity-70 p-2 rounded-full hover:bg-blue-500 hover:text-white transition-all w-10 h-10 flex items-center justify-center text-2xl ${COLOR_CLASSES.borderPrimary} z-10`}
       aria-label="Previous project"
     >
       &#8249;
@@ -183,7 +197,7 @@ const Work = () => {
     
     <button 
       onClick={nextOverview}
-      className="absolute right-4 bg-[#0a192f] bg-opacity-70 p-2 rounded-full hover:bg-[#86b5fa] hover:text-[#0a192f] transition-all w-10 h-10 flex items-center justify-center text-2xl border border-[#86b5fa] z-10"
+      className={`absolute right-4 ${COLOR_CLASSES.bgPrimary} bg-opacity-70 p-2 rounded-full hover:bg-blue-500 hover:text-white transition-all w-10 h-10 flex items-center justify-center text-2xl ${COLOR_CLASSES.borderPrimary} z-10`}
       aria-label="Next project"
     >
       &#8250;
@@ -199,7 +213,7 @@ const Work = () => {
       {projects[currentOverview].technologies.map((tech, index) => (
         <span 
           key={index}
-          className="px-3 py-1 bg-[#112240] text-[#86b5fa] rounded-full text-sm border border-[#86b5fa]"
+          className={`px-3 py-1 ${COLOR_CLASSES.bgCard} ${COLOR_CLASSES.textPrimary} rounded-full text-sm ${COLOR_CLASSES.borderPrimary}`}
         >
           {tech}
         </span>
@@ -207,27 +221,27 @@ const Work = () => {
     </div>
 
     <div className="flex gap-4">
-      <a 
-        href={projects[currentOverview].link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block border-2 border-[#86b5fa] px-6 py-2 rounded-lg text-white hover:bg-[#86b5fa] hover:text-[#0a192f] transition-all duration-300 flex items-center"
-      >
-        <span>View Project</span>
-        <ExternalLink size={16} className="ml-2" />
-      </a>
-      
-      {projects[currentOverview].demoUrl && (
         <a 
-          href={projects[currentOverview].demoUrl}
+          href={projects[currentOverview].link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block border-2 border-[#64ffda] px-6 py-2 rounded-lg text-white hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 flex items-center"
+          className={`inline-flex items-center border-2 ${COLOR_CLASSES.borderPrimary} px-6 py-2 rounded-lg text-white hover:bg-blue-500 hover:text-white transition-all duration-300`}
         >
-          <span>Live Demo</span>
-          <Play size={16} className="ml-2" />
+          <span>View Project</span>
+          <ExternalLink size={16} className="ml-2" />
         </a>
-      )}
+        
+        {projects[currentOverview].demoUrl && (
+          <a 
+            href={projects[currentOverview].demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center border-2 border-teal-500 px-6 py-2 rounded-lg text-white hover:bg-teal-500 hover:text-white transition-all duration-300`}
+          >
+            <span>Live Demo</span>
+            <Play size={16} className="ml-2" />
+          </a>
+        )}
     </div>
   </div>
 
@@ -241,7 +255,7 @@ const Work = () => {
           setIsAutoPlaying(false);
         }}
         className={`w-2 h-2 rounded-full transition-all ${
-          index === currentOverview ? 'bg-[#86b5fa] w-6' : 'bg-[#8892b0]'
+          index === currentOverview ? 'bg-blue-500 w-6' : 'bg-slate-500'
         }`}
         aria-label={`Go to project ${index + 1}`}
       />
@@ -249,17 +263,28 @@ const Work = () => {
   </div>
   
   {/* Current slide indicator */}
-  <div className="absolute top-4 left-4 bg-[#0a192f] bg-opacity-80 px-3 py-1 rounded-full border border-[#86b5fa] text-sm text-white">
+  <div className={`absolute top-4 left-4 ${COLOR_CLASSES.bgPrimary} bg-opacity-80 px-3 py-1 rounded-full ${COLOR_CLASSES.borderPrimary} text-sm text-white`}>
     {currentOverview + 1} / {projects.length}
   </div>
-</div>
+</motion.div>
 
     {/* Project Grid */}
-<div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
+<motion.div 
+  className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.4 }}
+  viewport={{ once: true }}
+>
   {currentProjects.map((project, index) => (
-    <div 
+    <motion.div 
       key={index} 
-      className='relative z-0 shadow-lg bg-[#112240] group container rounded-md flex justify-center items-center mx-auto content-div overflow-hidden'
+      className={`relative z-0 shadow-lg ${COLOR_CLASSES.bgCard} group container rounded-md flex justify-center items-center mx-auto content-div overflow-hidden`}
+      initial={{ opacity: 0, y: 50, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      whileHover={{ scale: 1.02, y: -5 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
     >
       <img 
         src={project.image} 
@@ -268,21 +293,21 @@ const Work = () => {
       />
       
       {/* Permanent hover indicator */}
-      <div className='absolute top-3 right-3 bg-[#0a192f] bg-opacity-80 rounded-full p-2 border border-[#86b5fa] shadow-md z-10'>
-        <Plus size={18} className='text-[#86b5fa] transform rotate-0 group-hover:rotate-45 transition-transform duration-300' />
+      <div className={`absolute top-3 right-3 ${COLOR_CLASSES.bgPrimary} bg-opacity-80 rounded-full p-2 ${COLOR_CLASSES.borderPrimary} shadow-md z-10`}>
+        <Plus size={18} className='text-blue-500 transform rotate-0 group-hover:rotate-45 transition-transform duration-300' />
       </div>
       
       {/* Subtle glow effect on card edges */}
-      <div className='absolute inset-0 rounded-md border border-[#86b5fa] opacity-40 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none'></div>
+      <div className='absolute inset-0 rounded-md border border-blue-500 opacity-40 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none'></div>
       
-      <div className='opacity-0 group-hover:opacity-100 absolute inset-0 bg-[#0a192f] bg-opacity-90 flex flex-col justify-center items-center p-4 text-center transition-opacity duration-300'>
-        <h3 className='text-xl font-bold text-[#ccd6f6] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300'>{project.name}</h3>
-        <p className='text-sm mt-2 text-[#8892b0] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75'>{project.description}</p>
+      <div className={`opacity-0 group-hover:opacity-100 absolute inset-0 ${COLOR_CLASSES.bgPrimary} bg-opacity-90 flex flex-col justify-center items-center p-4 text-center transition-opacity duration-300`}>
+        <h3 className={`text-xl font-bold ${COLOR_CLASSES.textPrimary} transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300`}>{project.name}</h3>
+        <p className={`text-sm mt-2 ${COLOR_CLASSES.textSecondary} transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75`}>{project.description}</p>
         <div className='flex flex-wrap justify-center gap-1 mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100'>
           {project.technologies.slice(0, 3).map((tech, techIndex) => (
             <span 
               key={techIndex} 
-              className="px-2 py-1 bg-[#112240] text-[#86b5fa] rounded-full text-xs border border-[#86b5fa]"
+              className={`px-2 py-1 ${COLOR_CLASSES.bgCard} ${COLOR_CLASSES.textPrimary} rounded-full text-xs ${COLOR_CLASSES.borderPrimary}`}
             >
               {tech}
             </span>
@@ -290,23 +315,23 @@ const Work = () => {
         </div>
         <div className='mt-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150 flex space-x-3'>
           <button 
-            className='border-2 border-[#86b5fa] px-4 py-2 rounded-lg text-[#86b5fa] hover:bg-[#86b5fa] hover:text-[#0a192f] transition-all duration-300 flex items-center text-sm'
+            className={`border-2 ${COLOR_CLASSES.borderPrimary} px-4 py-2 rounded-lg text-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center text-sm`}
             onClick={() => setSelectedProject(project)}
           >
             <span>View Details</span>
             <ChevronRight size={16} className='ml-1 group-hover:translate-x-1 transition-transform' />
           </button>
           <a href={project.link} target='_blank' rel='noopener noreferrer'>
-            <button className='border-2 border-[#8892b0] px-4 py-2 rounded-lg text-[#8892b0] hover:bg-[#8892b0] hover:text-[#0a192f] transition-all duration-300 flex items-center text-sm'>
+            <button className={`border-2 border-slate-500 px-4 py-2 rounded-lg text-slate-500 hover:bg-slate-500 hover:text-white transition-all duration-300 flex items-center text-sm`}>
               <span>View Code</span>
               <ExternalLink size={14} className='ml-1' />
             </button>
           </a>
         </div>
       </div>
-    </div>
-  ))}
-</div>
+    </motion.div>
+    ))}
+</motion.div>
 
         {/* Pagination */}
         <div className='flex justify-center mt-6'>

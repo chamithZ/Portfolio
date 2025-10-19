@@ -5,6 +5,7 @@ import Home from './components/Home';
 import NavBar from './components/NavBar';
 import Skills from './components/Skills';
 import Work from './components/Work';
+import CareerMap from './components/CareerMap';
 import {Helmet} from "react-helmet";
 import ChatInterface from './components/ChatInterface';
 
@@ -12,7 +13,7 @@ import ChatInterface from './components/ChatInterface';
 
 function App() {
   return (
-    <div className='bg-[#0a192f] '> 
+    <div className='bg-[#0a192f] w-screen overflow-x-hidden'> 
       <Helmet>
                 <meta charSet="utf-8" />
                 <title>ChamithKavinda</title>
@@ -22,6 +23,7 @@ function App() {
       <NavBar/>
        <Home/>
       <About/>
+      <CareerMap/>
       <Skills/>
       <ChatInterface />
       <div className='mt-28'> 

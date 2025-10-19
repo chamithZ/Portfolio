@@ -3,14 +3,16 @@ import { HiArrowNarrowRight, HiDownload } from 'react-icons/hi';
 import { FaCoffee } from 'react-icons/fa';
 import Typed from 'react-typed';
 import { Link } from 'react-scroll';
-import cv from '../assets/Chamith_Kavinda_CV.pdf'
+import { motion } from 'framer-motion';
+import cv from '../assets/Chamith_Kavinda_CV.pdf';
+import { COLOR_CLASSES } from '../constants/colors';
 
 function Home() {
   const [showTooltip, setShowTooltip] = useState(false);
   
   return (
-    <div name='home' className='w-full h-screen bg-[#0a192f] relative'>
-      <div className='absolute bottom-6 left-6'>
+    <div name='home' className={`w-full h-screen ${COLOR_CLASSES.bgPrimary} relative`}>
+      <div className='absolute bottom-6 left-6 z-[9996]'>
         <a 
           href="https://www.buymeacoffee.com/chamithkavinda" 
           target="_blank" 
@@ -37,36 +39,80 @@ function Home() {
 
       {/*container*/}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-        <p className='text-[#86b5fa] text-3xl mt-8'>Hi, I am</p>
-        <Typed
-          className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'
-          strings={['Chamith Kavinda']}
-          typeSpeed={120}
-          backSpeed={140}
-          loop
-        />
+        <motion.p 
+          className='text-[#86b5fa] text-3xl mt-8'
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Hi, I am
+        </motion.p>
+        
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.4, type: "spring", stiffness: 100 }}
+        >
+          <Typed
+            className={`text-4xl sm:text-7xl font-bold ${COLOR_CLASSES.textPrimary}`}
+            strings={['Chamith Kavinda']}
+            typeSpeed={120}
+            backSpeed={140}
+            loop
+          />
+        </motion.div>
 
-        <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I am a Full Stack developer</h2>
-        <p className='text-[#8892b0] py-4 max-w-[700px]'>I am an undergraduate student in the Faculty of Computing in Sliit. I prefer to learn innovative technologies that conquer the software engineering world. I would like to meet new teams and collaborate to develop new projects.</p>
+        <motion.h2 
+          className={`text-4xl sm:text-7xl font-bold ${COLOR_CLASSES.textSecondary}`}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          I build digital experiences
+        </motion.h2>
+        
+        <motion.p 
+          className={`${COLOR_CLASSES.textSecondary} py-4 max-w-[700px]`}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          I specialize in building robust full-stack applications that solve real-world problems. With a strong foundation in modern technologies and a passion for clean, efficient code, I bring fresh perspectives and innovative solutions to every project. I thrive in collaborative environments and love turning complex challenges into elegant, user-friendly applications.
+        </motion.p>
 
-        <div className='flex flex-col sm:flex-row mt-5'>
+        <motion.div 
+          className='flex flex-col sm:flex-row mt-5'
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
           <Link to="work" smooth={true} duration={500}>
-            <button className='text-white rounded-lg group border-2 px-6 py-3 my-2 sm:my-0 sm:mr-4 flex items-center hover:bg-blue-900 hover:border-blue-900'>
+            <motion.button 
+              className='text-white rounded-lg group border-2 px-6 py-3 my-2 sm:my-0 sm:mr-4 flex items-center backdrop-blur-md bg-blue-900/20 border-blue-400/30 hover:bg-blue-900/30 hover:border-blue-400/50 shadow-xl'
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)" }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               View My Projects
               <span className='group-hover:rotate-90 duration-300'>
                 <HiArrowNarrowRight className='ml-3' />
               </span>
-            </button>
+            </motion.button>
           </Link>
-          <a href={cv} download="Chamith_Kavinda_CV.pdf" smooth={true} duration={500}>
-            <button className='text-black rounded-lg group border-2 px-6 py-3 my-2 sm:my-0 flex items-center bg-[#86b5fa] hover:bg-blue-400 hover:border-blue-400'>
+          <a href={cv} download="Chamith_Kavinda_CV.pdf">
+            <motion.button 
+              className={`text-black rounded-lg group border-2 px-6 py-3 my-2 sm:my-0 flex items-center backdrop-blur-md bg-blue-400/80 border-blue-400/50 hover:bg-blue-400 hover:border-blue-400 shadow-xl`}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(134, 181, 250, 0.3)" }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               View My Resume
               <span className='group-hover:translate-y-2 duration-300'>
                 <HiDownload className='ml-3' />
               </span>
-            </button>
+            </motion.button>
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   )
